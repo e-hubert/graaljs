@@ -328,6 +328,8 @@ mx_sdk.register_graalvm_component(mx_sdk.GraalVmLanguage(
     ],
     launcher_configs=[
         mx_sdk.LanguageLauncherConfig(
+            use_modules='image',
+            main_module="org.graalvm.js.launcher",
             destination='bin/<exe:js>',
             jar_distributions=['graal-js:GRAALJS_LAUNCHER'],
             main_class='com.oracle.truffle.js.shell.JSLauncher',
